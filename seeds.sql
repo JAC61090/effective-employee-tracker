@@ -8,3 +8,7 @@ INSERT into department (name)
 VALUES ("Engineering");
 INSERT into department (name)
 VALUES ("Finance");
+INSERT into department (name)
+VALUES ("Legal');
+INSERT into department (name)
+VALUES ("Manager");

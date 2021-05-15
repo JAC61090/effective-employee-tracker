@@ -1,4 +1,4 @@
-Database Schema for teamMember DB
+Database Schema for teamMember_DB
 DROP DATABASE IF EXISTS teamMember_DB;
 CREATE DATABASE teamMember_DB;
 USE teamMember_DB;
