@@ -10,4 +10,16 @@ const viewOptions = [
   "exit"
 ];
 
+const employeeOptions = [
+  "Steve Colt",
+  "Marco Kane",
+  "Hank Ghille",
+  "Jesk Hightower",
+  "Greg Gribble",
+  "Richard Jackson",
+  "Dwayne Green",
+  "Hannibal Collins",
+  "Tim Murdock",
+  "exit"
+];
 
