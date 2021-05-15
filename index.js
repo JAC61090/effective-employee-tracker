@@ -23,3 +23,10 @@ const employeeOptions = [
   "exit"
 ];
 
+const updateOptions = [
+  "First Name",
+  "Last Name",
+  "Role",
+  "exit"
+];
+
