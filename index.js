@@ -95,3 +95,18 @@ function roleView() {
     runSearch();
   })
 }
+
+const updateEmployee = () => {
+
+    function runUpdateSearch() {
+      inquirer
+        .prompt({
+          name: "action",
+          type: "list",
+          message: "which employee would you like to update",
+          choices: employeeOptions
+        })
+
+    }
+    runUpdateSearch();
+}
