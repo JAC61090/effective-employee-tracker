@@ -85,3 +85,13 @@ function employeeView() {
     runSearch();
   })
 }
+
+function roleView() {
+  var sqlStr = "SELECT * FROM role";
+  connection.query(sqlStr, function (err, result) {
+    if (err) throw err;
+
+    console.table(result)
+    runSearch();
+  })
+}
