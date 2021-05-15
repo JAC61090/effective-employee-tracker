@@ -30,3 +30,37 @@ const updateOptions = [
   "exit"
 ];
 
+runSearch();
+
+function runSearch() {
+  inquirer
+    .prompt({
+      name: "action",
+      type: "list",
+      message: "What action would you like?",
+      choices: viewOptions
+    })
+    .then(function (answer) {
+      switch (answer.action) {
+          case viewOptions[0]:
+              departmentView();
+              break;
+
+          case viewOptions[1]:
+              roleView();
+              break;
+
+          case viewOptions[2]:
+              employeeView();
+              break;
+
+          case viewOptions[3]:
+              updateEmployee();
+
+          case updateOptions[4]:
+              connection.end();
+              break
+       }
+    })
+}
+
