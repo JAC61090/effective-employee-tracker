@@ -1,7 +1,8 @@
-Database Schema for teamMember_DB
-DROP DATABASE IF EXISTS teamMember_DB;
-CREATE DATABASE teamMember_DB;
-USE teamMember_DB;
+DROP DATABASE IF EXISTS employeesDB;
+
+CREATE DATABASE employeesDB;
+
+USE employeesDB;
 
 CREATE TABLE department(
   id INT NOT NULL AUTO_INCREMENT,

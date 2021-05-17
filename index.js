@@ -1,6 +1,24 @@
-const mysql = require('mysql');
 const inquirer = require('inquirer');
-const consoleTtable = require('console.table');
+consoleTtable = require('console.table');
+const connection = require('./connection');
+var mysql = require("mysql");
+
+// create the connection information for the sql database
+const connection = mysql.createConnection({
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: 'rootroot',
+    database: 'teamMember_DB',
+});
+
+
+// connect to the mysql server and sql database
+connection.connect(function (err) {
+    if (err) throw err;
+    console.log("connected as id " + connection.threadId);
+});
+
 
 const viewOptions = [
   "View Departments",
@@ -56,6 +74,7 @@ function runSearch() {
 
           case viewOptions[3]:
               updateEmployee();
+              break;
 
           case updateOptions[4]:
               connection.end();
@@ -65,7 +84,7 @@ function runSearch() {
 }
 
 function departmentView() {
-  var sqlStr = "SELECT * FROM department";
+  let sqlStr = "SELECT * FROM department_";
   connection.query(sqlStr, function (err, result) {
     if (err) throw err;
 
@@ -74,8 +93,8 @@ function departmentView() {
   })
 }
 
-function employeeView() {
-  var sqlStr = "SELECT first_name, last_name, title, salary FROM employee ";
+function employeeView () {
+  let sqlStr = "SELECT first_name, last_name, title, salary FROM employee ";
   sqlStr += "LEFT JOIN role ";
   sqlStr += "ON employee.role_id = role.id"
   connection.query(sqlStr, function (err, result) {
@@ -87,7 +106,7 @@ function employeeView() {
 }
 
 function roleView() {
-  var sqlStr = "SELECT * FROM role";
+  let sqlStr = "SELECT * FROM role";
   connection.query(sqlStr, function (err, result) {
     if (err) throw err;
 
