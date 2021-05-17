@@ -19,4 +19,4 @@ So that I can organize and plan my business
 ## GitHub & Links
 - github: JAC61090
 - REPO: 
-- SCREENCASTIFY: 
+
